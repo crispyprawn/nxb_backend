@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #result {
+            height: 200px;
+            width: 200px;
+            border: 5px solid pink;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="result"></div>
+    <button>send ajax request</button>
+    <button>send jquery request</button>
+    <script>
+        const sendButton = document.getElementsByTagName('button')[0]
+        sendButton.onclick = () => {
+            const xhr = new XMLHttpRequest()
+            xhr.open('GET', 'http://127.0.0.1:8000/server')
+            xhr.send()
+            xhr.onreadystatechange = () => {
+                if(xhr.readyState===4&&xhr.status>=200&&xhr.status<300){
+                    console.log(xhr.status);
+                    console.log(xhr.statusText);
+                    console.log(xhr.getAllResponseHeaders());
+                    console.log(xhr.response);
+                    const text = document.getElementById('result')
+                    text.innerHTML = xhr.response
+                }
+            }
+        }
+    </script>
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.js"></script>
+    <script>
+        // import $ from 'jquery'
+        $('button').eq(1).click(function() {
+            // $.getJSON('http://127.0.0.1:8000/jquery?callback=?',function(data) {
+            //     $('#result').html(`
+            //     name:${data.name},<br/>
+            //     campus:${data.campus}
+            //     `)
+            // })
+            $.getJSON('http://127.0.0.1:8000/jquery-jsonp?callback=?',function(data) {
+                $('#result').html(`${Object.keys(data)}`)
+            })
+        })
+    </script>
+</body>
+
+</html>

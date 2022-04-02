@@ -1,0 +1,22 @@
+{
+    "latest_tid": 3,
+    "teams": [
+        {
+            "tid": 1,
+            "time": 1647421206,
+            "name": "仙林散步组队",
+            "description": "因为球场关了，所以打算把体育活动改成跑步，也可以散步聊聊天。希望不要跑太快，我跑步比较菜?直接加我微信就好啦",
+            "members": [
+                {
+                    "uid": 14292,
+                    "nickname": "20本",
+                    "gender": 1,
+                    "sexual_orientation": 3,
+                    "personal_info": "",
+                    "join_time":1647421206
+                }
+            ],
+            "max_members": 3
+        }
+    ]
+}

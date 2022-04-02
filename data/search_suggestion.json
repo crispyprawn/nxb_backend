@@ -1,0 +1,38 @@
+{
+    "explore": [
+        "自杀",
+        "问号哥",
+        "问号",
+        "lmy紫砂",
+        "性行为",
+        "偷窥",
+        "计科",
+        "程设"
+    ],
+    "common": [
+        {
+            "topic": "又黑",
+            "hot_spot_index": 256
+        },
+        {
+            "topic": "保研",
+            "hot_spot_index": 73
+        },
+        {
+            "topic": "？？？",
+            "hot_spot_index": 67
+        },
+        {
+            "topic": "乌克兰",
+            "hot_spot_index": 64
+        },
+        {
+            "topic": "绩点",
+            "hot_spot_index": 61
+        },
+        {
+            "topic": "北京",
+            "hot_spot_index": 59
+        }
+    ]
+}
